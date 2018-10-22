@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pDc-Uu-28D">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Wikipedia View Controller-->
+        <scene sceneID="brR-6W-yzu">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" id="pDc-Uu-28D" customClass="SearchWikipediaViewController" customModule="WikipediaSearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mvY-Dm-NRI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ntf-3E-aPS">
+                                <rect key="frame" x="0.0" y="53" width="375" height="614"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search Wikipedia" translatesAutoresizingMaskIntoConstraints="NO" id="cuc-lC-9v1">
+                                <rect key="frame" x="0.0" y="15" width="375" height="38"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="pDc-Uu-28D" id="dF0-43-c2r"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ntf-3E-aPS" firstAttribute="top" secondItem="YHP-bn-4PV" secondAttribute="top" constant="33" id="Q5A-FE-rfC"/>
+                            <constraint firstItem="ntf-3E-aPS" firstAttribute="leading" secondItem="YHP-bn-4PV" secondAttribute="leading" id="T4y-b9-Skr"/>
+                            <constraint firstItem="YHP-bn-4PV" firstAttribute="trailing" secondItem="ntf-3E-aPS" secondAttribute="trailing" id="Yff-9w-TsZ"/>
+                            <constraint firstItem="cuc-lC-9v1" firstAttribute="top" secondItem="mvY-Dm-NRI" secondAttribute="top" constant="15" id="aCK-I4-He8"/>
+                            <constraint firstItem="ntf-3E-aPS" firstAttribute="top" secondItem="cuc-lC-9v1" secondAttribute="bottom" id="k34-dp-U43"/>
+                            <constraint firstItem="YHP-bn-4PV" firstAttribute="bottom" secondItem="ntf-3E-aPS" secondAttribute="bottom" id="r20-WR-dKw"/>
+                            <constraint firstItem="cuc-lC-9v1" firstAttribute="trailing" secondItem="YHP-bn-4PV" secondAttribute="trailing" id="r2p-C2-FOK"/>
+                            <constraint firstItem="cuc-lC-9v1" firstAttribute="leading" secondItem="YHP-bn-4PV" secondAttribute="leading" id="uda-rX-lMB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YHP-bn-4PV"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="cuc-lC-9v1" id="8Ch-Ry-nF0"/>
+                        <outlet property="searchResultsTableView" destination="ntf-3E-aPS" id="z9F-1m-mgP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CxJ-lD-wBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1306" y="164"/>
+        </scene>
+    </scenes>
+</document>
