@@ -93,14 +93,7 @@
 		9DA7CE1B2178BE880001FF69 = {
 			isa = PBXGroup;
 			children = (
-				9DA7CE5E2178D77F0001FF69 /* SearchWikipediaViewController.swift */,
-				9DA7CE662178D86A0001FF69 /* SearchWikipediaPresenter.swift */,
-				9DA7CE602178D7BC0001FF69 /* SearchWikipediaInteractor.swift */,
-				9DA81352217C805A00574E4C /* SearchResultsTableViewCell.swift */,
-				9DA81353217C805A00574E4C /* SearchResultsTableViewCell.xib */,
-				9DA7CE622178D7D70001FF69 /* SearchWikipediaInteractorWorker.swift */,
-				9DA8134D217C6C9500574E4C /* SearchWikipediaPagesModel.swift */,
-				9DA7CE642178D83B0001FF69 /* SearchWikipediaModel.swift */,
+				9DA81356217DC8FE00574E4C /* SearchWikipedia */,
 				9DA7CE262178BE880001FF69 /* WikipediaSearchApp */,
 				9DA7CE3E2178BE8B0001FF69 /* WikipediaSearchAppTests */,
 				9DA7CE492178BE8B0001FF69 /* WikipediaSearchAppUITests */,
@@ -147,6 +140,21 @@
 				9DA7CE4C2178BE8B0001FF69 /* Info.plist */,
 			);
 			path = WikipediaSearchAppUITests;
+			sourceTree = "<group>";
+		};
+		9DA81356217DC8FE00574E4C /* SearchWikipedia */ = {
+			isa = PBXGroup;
+			children = (
+				9DA7CE5E2178D77F0001FF69 /* SearchWikipediaViewController.swift */,
+				9DA7CE662178D86A0001FF69 /* SearchWikipediaPresenter.swift */,
+				9DA7CE602178D7BC0001FF69 /* SearchWikipediaInteractor.swift */,
+				9DA81352217C805A00574E4C /* SearchResultsTableViewCell.swift */,
+				9DA81353217C805A00574E4C /* SearchResultsTableViewCell.xib */,
+				9DA7CE622178D7D70001FF69 /* SearchWikipediaInteractorWorker.swift */,
+				9DA8134D217C6C9500574E4C /* SearchWikipediaPagesModel.swift */,
+				9DA7CE642178D83B0001FF69 /* SearchWikipediaModel.swift */,
+			);
+			path = SearchWikipedia;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

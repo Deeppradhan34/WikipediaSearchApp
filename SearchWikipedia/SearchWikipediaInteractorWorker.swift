@@ -27,7 +27,6 @@ class SearchWikipediaInteractorWorker
     func fetchWikipediaResult(searchWikipediaWithString: String, completionHandler: @escaping(_ result: FetchDataResult <[SearchedInformation]>) -> Void) {
         let searchStr = searchWikipediaWithString.replacingOccurrences(of: " ", with: "+")
         let url = URL.init(string: "https://en.wikipedia.org//w/api.php?action=query&format=json&prop=pageimages%7Cpageterms&generator=prefixsearch&redirects=1&formatversion=2&piprop=thumbnail&pithumbsize=50&pilimit=10&wbptterms=description&gpssearch=\(searchStr)&gpslimit=10")
-        
         if (url != nil) {
             let session = URLSession.shared
             let data = session.dataTask(with: url!) { (data, response, error) in
