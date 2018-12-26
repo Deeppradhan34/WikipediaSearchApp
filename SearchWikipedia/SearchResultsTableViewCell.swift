@@ -32,18 +32,18 @@ class SearchResultsTableViewCell: UITableViewCell {
     }
     
     func downloadImage(imageUrl: String?) {
-               if let imgUrl = imageUrl, imgUrl.count > 0 {
-                   DispatchQueue.global(qos: .default).async {//concuurent
-                       let url = URL.init(string: imgUrl)
-                       do {
-                           let data = try Data.init(contentsOf: url!)
-                           DispatchQueue.main.async {
-                               self.searchedImage?.image = UIImage.init(data: data)
-                           }
-                       } catch {
-                           print("Failed")
-                       }
-                   }
-               }
+        if let imgUrl = imageUrl, imgUrl.count > 0 {
+            DispatchQueue.global(qos: .default).async {//concuurent
+                let url = URL.init(string: imgUrl)
+                do {
+                    let data = try Data.init(contentsOf: url!)
+                    DispatchQueue.main.async {
+                        self.searchedImage?.image = UIImage.init(data: data)
+                    }
+                } catch {
+                    print("Failed")
+                }
+            }
+        }
     }
 }
